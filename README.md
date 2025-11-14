@@ -1,36 +1,87 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🍫 Cacau de Origem
 
-## Getting Started
+Um projeto de UI e UX desenvolvido para apresentar, de forma imersiva e elegante, a jornada do cacau — da plantação ao produto final — destacando sua essência, origem e impacto cultural.
 
-First, run the development server:
+---
+
+## 🧩 Estrutura do Projeto
+
+📦 **app/**  
+┣ 📂 **components/**  
+┃ ┣ 📂 **navbar/** → Barra de navegação principal  
+┃ ┣ 📂 **hero/** → Sessão inicial com destaque visual  
+┃ ┣ 📂 **process/** → Etapas do processo do cacau (plantio, colheita, fermentação…)  
+┃ ┣ 📂 **regions/** → Seção sobre regiões produtoras  
+┃ ┗ 📂 **footer/** → Rodapé do site  
+┣ 📂 **data/**  
+┃ ┣ 📜 **regions.ts** → Lista de regiões produtoras  
+┃ ┗ 📜 **process.ts** → Dados das etapas do processamento do cacau  
+┣ 📜 **page.tsx** → Página inicial  
+┣ 📜 **sobre/page.tsx** → Página sobre o cacau  
+┗ 📜 **processo/page.tsx** → Página detalhando o processo
+
+---
+
+## 🛠️ Personalização
+
+Transforme o projeto para sua marca, pesquisa ou estudo alterando:
+
+### 🌍 Regiões Produtoras  
+📁 `app/data/regions.ts`  
+Edite nomes, descrições e porcentagens de produção.
+
+### 🔄 Etapas do Processo  
+📁 `app/data/process.ts`  
+Modifique textos, imagens e número de etapas.
+
+### 🎨 Hero / Imagem Principal  
+📁 `app/components/hero/`  
+Troque imagens, textos e animações conforme sua necessidade.
+
+### 📸 Galeria / Ilustrações  
+📁 `public/images/`  
+Substitua ou adicione imagens do cacau, plantações ou produtos.
+
+### 🌐 Navbar  
+📁 `app/components/navbar/`  
+Altere links, títulos, logotipo e navegação geral.
+
+---
+
+## 💻 Como Rodar Localmente
 
 ```bash
+# Clone o repositório
+git clone https://github.com/victor-kiss/cacau-de-origem.git
+
+# Acesse a pasta
+cd cacau-de-origem
+
+# Instale as dependências
+npm install
+
+# Execute o projeto
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+O projeto estará disponível em:
+👉 http://localhost:3000
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+🌐 Deploy
+Para hospedar na Vercel:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+bash
+Copiar código
+npm run build
+vercel --prod
+Exemplo de deploy:
+🔗 https://cacau-de-origem.vercel.app/
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+🧡 Créditos
+Desenvolvido por Victor Kiss, com foco em transmitir a essência da origem do cacau de forma visual, educativa e artística.
 
-## Learn More
+"Cada fruto conta uma história, e cada história merece ser compartilhada."
 
-To learn more about Next.js, take a look at the following resources:
+💡 Dica Extra
+Quer transformar este projeto em um site institucional, educativo ou comercial?
+Basta trocar os textos, imagens e dados — toda a estrutura moderna, animações e responsividade já estão prontas.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+💖 Feito com npm run cacao e muita criatividade 💖
