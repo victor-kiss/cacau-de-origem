@@ -37,73 +37,38 @@ export default function ProductSlide() {
     initial: { x: 100, opacity: 0 },
     animate: { x: 0, opacity: 1 },
     exit: { x: -100, opacity: 0 },
-    transition: { type: "spring", stiffness: 50, ease: "easeIn",delay:0.2 },
+    transition: { type: "spring", stiffness: 100, ease: "easeIn", delay: 0.2 },
   };
 
   const slideInLeft = {
     initial: { x: -100, opacity: 0 },
     animate: { x: 0, opacity: 1 },
     exit: { x: 100, opacity: 0 },
-    transition: { type: "spring", stiffness: 50, ease: "easeIn",delay:0.2 },
+    transition: { type: "spring", stiffness: 100, ease: "easeIn", delay: 0.2 },
   };
 
   return (
-    <section className="bg-cacao text-cacao-dark relative w-full min-h-screen flex flex-col-reverse lg:flex-row sm:gap-8 overflow-hidden">
+    <section className="bg-cacao text-cacao-dark relative w-full min-h-screen flex flex-col-reverse lg:flex-row sm:gap-8 overflow-hidden ">
       <ChocolateWave
         className="w-screen h-auto max-h-24 sm:max-h-80 absolute top-0 left-0"
         color="#2A1E18 "
       />
-      <AnimatePresence mode="popLayout" initial={false}>
+      <AnimatePresence mode="sync" initial={false}>
         <motion.div
-          key={index} 
-          className="flex flex-1 w-full md:h-screen flex-col justify-center align-center items-center p-8 gap-12 z-10"
+          key={index}
+
+          className="flex flex-1 w-full flex-col justify-center items-center p-8 sm:gap-8 z-10"
         >
-          {/* Título */}
-          <motion.h2
-            variants={slideInLeft} 
-            initial="initial"
-            whileInView="animate"
-            exit="exit"
-            className="text-5xl sm:text-6xl font-bold text-beige-dark max-w-2xl text-center will-change-transform"
-          >
-            {product.name}
-          </motion.h2>
 
-          {/* Descrição */}
-          <motion.p
-            variants={slideInLeft}
-            initial="initial"
-           whileInView="animate"
-            exit="exit"
-            transition={{ type: "spring", stiffness: 50, delay: 0.15 }} // Atraso para efeito cascata
-            className="text-beige-light max-w-lg text-center will-change-transform"
-          >
-            {product.description}
-          </motion.p>
-
-          {/* Botão */}
           <motion.div
             variants={slideInLeft}
             initial="initial"
-           whileInView="animate"
+            whileInView="animate"
             exit="exit"
-            transition={{ type: "spring", stiffness: 50, delay: 0.3 }} // Atraso para efeito cascata
-            className="will-change-transform"
-          >
-            <Link
-              href={""}
-              className="px-6 py-3 bg-gold-light rounded-full text-cacao-dark font-bold hover:bg-gold transition-all duration-300  easeInS"
-            >
-              Conhecer
-            </Link>
-          </motion.div>
+            transition={{ type: "spring", stiffness: 50, delay: 0.3 }}
 
-          <motion.div  variants={slideInLeft}
-            initial="initial"
-           whileInView="animate"
-            exit="exit"
-            transition={{ type: "spring", stiffness: 50, delay: 0.3 }} 
-            className="flex justify-between gap-6 sm:gap-8 items-center mt-4">
+            className="flex justify-between gap-6 sm:gap-8 items-center mt-4 mb-4 order-1 lg:order-3 will-change-transform"
+          >
             <button
               onClick={() => prevProduct()}
               className="text-3xl font-bold text-beige-dark hover:text-gold-light transition-all duration-300 ease-in-out"
@@ -131,17 +96,56 @@ export default function ProductSlide() {
               <i className="bi bi-caret-right-fill"></i>
             </button>
           </motion.div>
+
+
+          <div
+  
+            className="flex h-auto flex-col gap-6 sm:gap-8 items-center order-2 lg:order-1 will-change-transform"
+          >
+            {/* Título */}
+            <motion.h2
+              variants={slideInLeft}
+              initial="initial"
+              whileInView="animate"
+              exit="exit"
+              className="text-5xl sm:text-6xl font-bold text-beige-dark max-w-2xl text-center will-change-transform"
+            >
+              {product.name}
+            </motion.h2>
+
+            {/* Descrição e Botão Conhecer */}
+            <motion.div
+              variants={slideInLeft}
+              initial="initial"
+              whileInView="animate"
+              exit="exit"
+              transition={{ type: "spring", stiffness: 50, delay: 0.15 }} // Atraso para efeito cascata
+              className="flex flex-col gap-6 sm:gap-12 items-center will-change-transform" // Adicionei um flex-col para agrupar descrição e botão Link
+            >
+              <p className="text-beige-light max-w-lg text-center">
+                {product.description}
+              </p>
+
+              {/* Botão Conhecer */}
+              <Link
+                href={""}
+                className="px-6 py-3 bg-gold-light rounded-full text-cacao-dark font-bold hover:bg-gold transition-all duration-300 easeInS"
+              >
+                Conhecer
+              </Link>
+            </motion.div>
+          </div>
         </motion.div>
 
         {/* Imagem do Produto */}
         <motion.div
-          key={`image-${index}`} 
-          variants={slideInRight} 
+          key={`image-${index}`}
+          variants={slideInRight}
           initial="initial"
-         whileInView="animate"
+          whileInView="animate"
           exit="exit"
           transition={{ type: "spring", stiffness: 50, delay: 0.2 }}
-          className="w-full flex flex-1 z-10 items-center justify-center will-change-transform"
+          className="w-full flex flex-1 z-10 items-center justify-center will-change-transform order-0 lg:order-2"
         >
           <Image
             src={product.imageUrl}
@@ -150,7 +154,7 @@ export default function ProductSlide() {
             height={800}
             priority={true}
             quality={75}
-            className="object-contain drop-shadow-2xl drop-shadow-black saturate-100"
+            className="object-contain drop-shadow-2xl drop-shadow-black sm:h-auto saturate-100"
           />
         </motion.div>
       </AnimatePresence>
