@@ -102,7 +102,7 @@ export default function Home() {
           NOSSA HISTÓRIA SECTION
       =========================== */}
 
-      <CacauSection title="Nossa História" texts={texts.historia} backgroundColor="bg-beige-dark" imageUrl="/assets/cacau-cesta.png" id='historia'/>
+      <CacauSection title="Nossa História" texts={texts.historia} backgroundColor="bg-beige-dark" imageUrl="/cacau-cesta.png" id='historia'/>
       {/* ===========================
           SUSTENTABILIDADE SECTION
       =========================== */}
