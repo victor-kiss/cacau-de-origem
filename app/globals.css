@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import "tailwindcss";
+
+
+body{
+  box-sizing:border-box;
+  padding:0;
+  margin:0;
+}
+
+@theme {
+  /* 🌿 Paleta Cacau de Origem */
+  --color-cacao: #3E2C23;
+  --color-cacao-light: #6B4A3B;
+  --color-cacao-dark: #2A1E18;
+
+  --color-gold: #C69C6D;
+  --color-gold-light: #E2B97C;
+  --color-gold-dark: #A47850;
+
+  --color-leaf: #517250;
+  --color-leaf-light: #89dd78;
+  --color-leaf-dark: #324B35;
+
+  --color-beige: #FBF6EE;
+  --color-beige-light: #FDF9F3;
+  --color-beige-dark: #EAD9B7;
+
+  --color-accent-cream: #F4E3C1;
+  --color-accent-sand: #EBD8B1;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', serif;
+}
