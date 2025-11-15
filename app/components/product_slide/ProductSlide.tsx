@@ -56,17 +56,14 @@ export default function ProductSlide() {
       <AnimatePresence mode="sync" initial={false}>
         <motion.div
           key={index}
-
           className="flex flex-1 w-full flex-col justify-center items-center p-8 sm:gap-8 z-10"
         >
-
           <motion.div
             variants={slideInLeft}
             initial="initial"
             whileInView="animate"
             exit="exit"
             transition={{ type: "spring", stiffness: 50, delay: 0.3 }}
-
             className="flex justify-between gap-6 sm:gap-8 items-center mt-4 mb-4 order-1 lg:order-3 will-change-transform"
           >
             <button
@@ -97,11 +94,7 @@ export default function ProductSlide() {
             </button>
           </motion.div>
 
-
-          <div
-  
-            className="flex h-auto flex-col gap-6 sm:gap-8 items-center order-2 lg:order-1 will-change-transform"
-          >
+          <div className="flex h-auto flex-col gap-6 sm:gap-8 items-center order-2 lg:order-1 will-change-transform">
             {/* Título */}
             <motion.h2
               variants={slideInLeft}
@@ -154,7 +147,10 @@ export default function ProductSlide() {
             height={800}
             priority={true}
             quality={75}
-            className="object-contain drop-shadow-2xl drop-shadow-black sm:h-auto saturate-100"
+            // OTIMIZAÇÃO: Adiciona 'sizes' para carregar a imagem correta por viewport
+            sizes="(max-width: 1023px) 90vw, 50vw"
+            // AJUSTE DE TAMANHO: Define alturas específicas para mobile/tablet e auto no desktop
+            className="h-80 w-auto sm:h-96 lg:h-auto object-contain drop-shadow-2xl drop-shadow-black saturate-100"
           />
         </motion.div>
       </AnimatePresence>
