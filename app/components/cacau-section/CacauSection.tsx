@@ -73,7 +73,7 @@ export default function CacauSection({
             height={800}
             className=" hover:scale-105 transition-transform duration-500 object-contain"
             priority={true}
-            quality={75}
+            quality={70}
           />
         )}
         {videoUrl && (

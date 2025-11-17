@@ -28,6 +28,7 @@ export default function Home() {
         muted
         loop
         aria-hidden="true"
+        poster="/cacau-thumb.jpg"
       />
 
         {/* Overlay escuro */}
@@ -76,7 +77,7 @@ export default function Home() {
               className="my-4 sm:m-0"
             > 
             <Link
-              href={"/"}
+              href={"#produtos"}
               className="px-6 py-3 bg-cacao-dark/60 backdrop-blur-sm rounded-full 
              transition-all duration-300 
              text-gold-light 
@@ -103,15 +104,16 @@ export default function Home() {
       =========================== */}
 
       <CacauSection title="Nossa História" texts={texts.historia} backgroundColor="bg-beige-dark" imageUrl="/cacau-cesta.png" id='historia'/>
-      {/* ===========================
-          SUSTENTABILIDADE SECTION
-      =========================== */}
+    
 
 
       {/* ===========================
          SLIDE PRODUTOS
       =========================== */}
-      <ProductSlide />
+      <ProductSlide id="produtos"/>
+
+
+
       <CacauSection title="Sustentabilidade" texts={texts.sustentabilidade} imageUrl="/cacau_chocolate.png" backgroundColor="bg-leaf-dark" id='sustentabilidade' />
 
     </div>
