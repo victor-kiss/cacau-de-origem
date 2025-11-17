@@ -104,7 +104,7 @@ export default function ProductSlide({...props}:HtmlHTMLAttributes<HTMLElement>)
             exit="exit"
             transition={{ type: "spring", stiffness: 50, delay: 0.3 }} 
             className="flex justify-between gap-6 sm:gap-8 items-center mt-4">
-            <button
+            <button type="button"
               onClick={() => prevProduct()}
               className="text-3xl font-bold text-beige-dark hover:text-gold-light transition-all duration-300 ease-in-out"
             >

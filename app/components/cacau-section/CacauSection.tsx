@@ -71,9 +71,10 @@ export default function CacauSection({
             alt="cacau"
             width={800}
             height={800}
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             className=" hover:scale-105 transition-transform duration-500 object-contain"
             priority={true}
-            quality={70}
+            quality={50}
           />
         )}
         {videoUrl && (
