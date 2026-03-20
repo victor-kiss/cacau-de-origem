@@ -1,7 +1,9 @@
 
 
 <div align="center">
-# 🍫 Cacau de Origem
+  
+#🍫 Cacau de Origem
+
 <img src="./public/project_thumb1.PNG" alt="Banner do Projeto Cacau de Origem" width="100%" max-width="800px">
 
 **Uma jornada digital interativa e elegante explorando a essência do cacau, do plantio ao paladar.**
